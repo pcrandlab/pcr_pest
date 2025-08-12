@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCR & Lab Services | Jaipur's Premier Pest Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        :root {
+            --primary: #0056b3;      /* Royal Blue */
+            --secondary: #ff7e33;     /* Orange */
+            --accent: #00a651;        /* Green */
+            --light: #f5f7fa;
+            --dark: #222;
+            --text: #444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: #fff;
+        }
+        
+        h1, h2, h3 {
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #004494;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,86,179,0.3);
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero2.jpg') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            background: var(--light);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        /* ===== ABOUT SECTION ===== */
+        
+            
+        .about .container{
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse; /* This flips the order: image on right, text on left */
+            gap: 50px; /* Space between text and image */
+        }
+
+        .about-img {
+            flex: 1;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+        }
+        
+        
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials {
+            background: var(--light);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '\201C';
+            font-size: 80px;
+            color: rgba(0,86,179,0.1);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 20px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: #777;
+        }
+        
+        /* ===== GALLERY SECTION ===== */
+        .gallery {
+            padding-bottom: 50px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* ===== VIDEOS SECTION ===== */
+        .video-section {
+    padding: 50px 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+.video-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.video-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-card h3 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #333;
+}
+    
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            padding-bottom: 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 5px;
+        }
+        
+        .contact-text p, .contact-text a {
+            color: var(--text);
+            text-decoration: none;
+        }
+        
+        .contact-text a:hover {
+            color: var(--primary);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #004494;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,86,179,0.3);
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 992px) {
+            .about .container{
+                flex-direction: column-reverse; /* text on top, image below */
+            }
+    
+            .about-img {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+        }        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .video-grid {
+            grid-template-columns: 1fr;
+        }
+}
+
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">PCR & <span>Lab</span> Services</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Quality Pest Control Services at Your Doorstep</h1>
+                <p>Jaipur's most trusted pest management company with 15+ years of experience serving Mansarovar and surrounding areas</p>
+                <a href="#contact" class="btn btn-primary">Enquire Now</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- ===== SERVICES SECTION ===== -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive pest control solutions for residential and commercial properties</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/s1.jpg" alt="Commercial Pest Control">
+                    </div>
+                    <div class="service-content">
+                        <h3>Commercial Pest Control Services</h3>
+                        <p>We provide high quality, efffective and the best commercial pest control services at competitive rates.</p>
+                        <a href="#contact" class="btn btn-primary">Get Service</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/s2.jpg" alt="Get Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>Get Pest Control Servies</h3>
+                        <p>We have a team of professionals who would come to your space with high tech technology to get rid of pest.</p>
+                        <a href="#contact" class="btn btn-primary">Get Service</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/s3.jpg" alt="Pre Construction">
+                    </div>
+                    <div class="service-content">
+                        <h3>Pre Construction</h3>
+                        <p>We excel in providing a wide range of effective and reliable pre construction pest services.</p>
+                        <a href="#contact" class="btn btn-primary">Get Service</a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/s4.jpg" alt="Bed Bug Control">
+                    </div>
+                    <div class="service-content">
+                        <h3>Bed Bug Control</h3>
+                        <p>We bring in expert professionals with modern heat-treatment technology to thoroughly inspect and completely eradicate bed bugs from your space.</p>
+                        <a href="#contact" class="btn btn-primary">Get Service</a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/s5.jpg" alt="Rodent Control">
+                    </div>
+                    <div class="service-content">
+                        <h3>Rodent Control</h3>
+                        <p>Our skilled team uses advanced technology to safely remove rodents from your property and implement prevention measures to keep them away.</p>
+                        <a href="#contact" class="btn btn-primary">Get Service</a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/s6.jpg" alt="Honey Bees Control">
+                    </div>
+                    <div class="service-content">
+                        <h3>Honey Bees Control</h3>
+                        <p>Backed by a team of highly skilled staffs, we are able to render pest control services for honey bees.</p>
+                        <a href="#contact" class="btn btn-primary">Get Service</a>
+                    </div>
+                </div>
+        
+                <!-- Service 7 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/s7.jpg" alt="Termite Control">
+                    </div>
+                    <div class="service-content">
+                        <h3>Termite Control</h3>
+                        <p>Our pest control expertise lies in rendering services that are best suited for getting rid of termites.</p>
+                        <a href="#contact" class="btn btn-primary">Get Service</a>
+                    </div>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/s8.jpg" alt="Plant Pest Control">
+                    </div>
+                    <div class="service-content">
+                        <h3>Plant Pest Control</h3>
+                        <p>Our Expertise lies in rendering services in controlling pests that are harmful for the plants</p>
+                        <a href="#contact" class="btn btn-primary">Get Service</a>
+                    </div>
+                </div>
+                
+                <!-- Service 9-->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/s9.jpg" alt="Cockroach Control">
+                    </div>
+                    <div class="service-content">
+                        <h3>Cockroach Control</h3>
+                        <p>We have a team of professionals with high-tech equipment to eliminate cockroaches effectively, with guaranteed results and follow-up visits.</p>
+                        <a href="#contact" class="btn btn-primary">Get Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="about-img">
+                <img src="images/about_us.jpg" alt="Our Team">
+            </div>
+            <div class="about-content">
+                <h2>About PCR & Lab Services</h2>
+                <p>We, PCR & Lab Services situated at Mansarovar, Jaipur, Rajasthan, are the leading providers of pest and termite control services in the region. With over 15 years of experience, we have built a reputation for excellence in pest management.</p>
+                <p>Our team of highly trained and certified technicians uses the latest technology and eco-friendly products to ensure effective pest control while maintaining safety standards. We are committed to providing quality services with superior customer satisfaction.</p>
+                <p>All our services come with a satisfaction guarantee and follow-up support to ensure your property remains pest-free.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <section class="gallery section-padding" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Gallery</h2>
+                <p>See our team in action and our successful pest control projects</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/g1.jpg" alt="Service 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/g2.jpg" alt="Service 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/g3.jpg" alt="Service 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/g4.jpg" alt="Service 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/g5.jpg" alt="Service 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/g6.jpg" alt="Service 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/g7.jpg" alt="Service 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/g8.jpg" alt="Service 8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEOS SECTION ===== -->
+    <section class="video-section section-padding" id="videos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Pest Control Videos</h2>
+                <p>Watch our experts in action and learn more about pest control</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <!-- Replace with your YouTube video ID -->
+                        <iframe src="https://www.youtube.com/embed/iN2L-NXQVoU" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <h3>Termite Treatment Process</h3>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <!-- Replace with your YouTube video ID -->
+                        <iframe src="https://www.youtube.com/embed/hXlSicZE9jI" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <h3>Oragnic Pest Control</h3>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <!-- Replace with your YouTube video ID -->
+                        <iframe src="https://www.youtube.com/embed/uFK0t9DHu1Q" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <h3>Bed Bugs</h3>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <!-- Replace with your YouTube video ID -->
+                        <iframe src="https://www.youtube.com/embed/AVSs-EkYTCo" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <h3>plant pest control/h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What our customers say about our services</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>PCR & Lab Services provided excellent termite treatment for our home in Mansarovar. Their team was professional and thorough. Highly recommended!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Sharma">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Sharma</h4>
+                            <p>Mansarovar, Jaipur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>We had a severe cockroach problem in our restaurant. PCR & Lab Services solved it completely with their effective treatment. Great service!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Gupta">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Gupta</h4>
+                            <p>Restaurant Owner, Jaipur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>After trying many pest control companies, we finally found PCR & Lab Services who actually solved our bed bug problem. Thank you for your excellent service!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Vikram Singh">
+                        </div>
+                        <div class="author-info">
+                            <h4>Vikram Singh</h4>
+                            <p>Vaishali Nagar, Jaipur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch for a free inspection and quote</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Our Office</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Address</h4>
+                                <p>C-14, Vidhan Sabha Road, Near Police Colony 1 Point, Mansarovar, Jaipur, Rajasthan 302020</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:pcrandlab@gmail.com">pcrandlab@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <a href="tel:+918453435353">+91-8453435353</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Working Hours</h4>
+                                <p>Mon-Sun: Open 24 Hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="enquiryForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Mobile Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="termite-control">Termite Control</option>
+                                <option value="cockroach-control">Cockroach Control</option>
+                                <option value="bed-bug-control">Bed Bug Control</option>
+                                <option value="rodent-control">Rodent Control</option>
+                                <option value="other">Other Service</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Javascript -->
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby-eqcCF1R-0XIkUgbDjCApafhd5ouJkfYrtCIGyy-bgF2nqOJU9P71bE4rDtsR765wdg/exec';
+    const form = document.getElementById('enquiryForm');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        formMessage.style.display = 'none';
+        const formData = new FormData(form);
+
+        fetch(scriptURL, { method: 'POST', body: formData })
+            .then(response => {
+                if (response.ok) {
+                    showMessage('✅ Thank you! Your enquiry has been submitted successfully.', 'success');
+                    form.reset();
+                } else {
+                    showMessage('❌ Something went wrong. Please try again.', 'error');
+                }
+            })
+            .catch(() => showMessage('❌ Error sending message. Check your internet connection.', 'error'));
+    });
+
+    function showMessage(message, type) {
+        formMessage.textContent = message;
+        formMessage.className = `form-message ${type}`;
+        formMessage.style.display = 'block';
+        formMessage.style.opacity = '1';
+        setTimeout(() => {
+            formMessage.style.opacity = '0';
+            setTimeout(() => formMessage.style.display = 'none', 300);
+        }, 5000);
+    }
+    </script>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>PCR & Lab Services</h3>
+                    <p>Jaipur's premier pest control company providing effective and eco-friendly solutions for residential and commercial properties.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Termite Control</a></li>
+                        <li><a href="#">Cockroach Control</a></li>
+                        <li><a href="#">Bed Bug Control</a></li>
+                        <li><a href="#">Rodent Control</a></li>
+                        <li><a href="#">Mosquito Control</a></li>
+                        <li><a href="#">General Pest Control</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> C-14, Vidhan Sabha Road, Mansarovar, Jaipur</li>
+                        <li><i class="fas fa-phone-alt"></i> +91-8453435353</li>
+                        <li><i class="fas fa-envelope"></i> pcrandlab@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Open 24 Hours</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 PCR & Lab Services. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
